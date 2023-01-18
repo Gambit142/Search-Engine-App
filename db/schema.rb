@@ -22,8 +22,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_103719) do
   end
 
   create_table "queries", force: :cascade do |t|
-    t.string "name"
-    t.integer "search_counter"
+    t.string "text"
+    t.integer "search_counter", default: 0
     t.bigint "user_id", null: false
     t.bigint "article_id", null: false
     t.datetime "created_at", null: false
