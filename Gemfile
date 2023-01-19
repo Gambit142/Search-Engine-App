@@ -48,6 +48,10 @@ gem 'cancancan' # Authorization
 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main' # Faker
 
+gem 'cssbundling-rails' # CSS Bundling
+
+gem 'jsbundling-rails' # JS Bundling
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
