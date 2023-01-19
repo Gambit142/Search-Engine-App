@@ -84,3 +84,4 @@ production:
   database: search_engine_app_production
   username: search_engine_app
   password: <%= ENV["SEARCH_ENGINE_APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
