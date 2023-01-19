@@ -1,3 +1,18 @@
 <div class="max-w-7xl mx-auto mt-12">
-  <%= render "articles", players: @articles %>
+  <div class="flex justify-between mb-1">
+    <%= link_to "Analytics Page", queries_path, class: "bg-blue-500 text-white p-2 rounded-sm" %>
+    <%= form_with url: list_articles_path, method: :get, data: { controller: "search-form", search_form_target: "form", turbo_frame: "articles" } do |form| %>
+      <%= form.text_field :name, 
+        placeholder: "Search by name", 
+        class: "border border-blue-500 rounded p-2",
+        autocomplete: "off",
+        data: { action: "input->search-form#search", search_form_target: "userInput" }
+      %>
+      <%= form.button "Search", 
+        class: "bg-blue-500 text-white p-2 rounded-sm", 
+        data: { action: "click->search-form#submit", search_form_target: "submitButton" }
+      %>
+    <% end %>
+  </div>
+  <%= render "articles", articles: @articles %>
 </div>

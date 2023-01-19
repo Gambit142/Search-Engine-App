@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   before_action :update_allowed_parameters, if: :devise_controller?
 
   rescue_from CanCan::AccessDenied do |exception|
-    exception.message = "You are not authorized to access this page."
     respond_to do |format|
       format.html { redirect_to main_app.root_url, notice: exception.message, status: :not_found }
     end

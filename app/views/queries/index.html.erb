@@ -1,0 +1,25 @@
+<div class="max-w-7xl mx-auto mt-12">
+  <table class="min-w-full bg-white">
+    <thead class="bg-gray-800 text-white">
+      <tr>
+        <th id="articles-name" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <span>Name</span>
+        </th>
+        <th id="articles-url" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <span>Frequency</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700">
+      <% @user.queries.each do |query| %>
+        <tr>
+          <td class="text-left py-3 px-6"><%= query.text %></td>
+          <td class="text-left py-3 px-6"><%= query.search_counter %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="flex justify-center">
+    <%= link_to "Back", articles_path, class: "bg-gray-800 text-white p-2 rounded-sm" %>
+  </div>
+</div>
