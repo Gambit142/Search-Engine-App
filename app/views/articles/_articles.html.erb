@@ -1,0 +1,27 @@
+<%= turbo_frame_tag 'articles', class: "shadow overflow-hidden rounded border-b border-gray-200" do %>
+  <table class="min-w-full bg-white">
+    <thead class="bg-gray-800 text-white">
+      <tr>
+        <th id="articles-name" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <%= sort_indicator if params[:column] == "name" %>
+          <%= sort_link(column: "name", label: "Name") %>
+        </th>
+        <th id="articles-url" class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer relative">
+          <%= sort_indicator if params[:column] == "url" %>
+          <%= sort_link(column: "url", label: "URL") %>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody class="text-gray-700">
+      <% @articles.each do |article| %>
+        <tr>
+          <td class="text-left py-3 px-6"><%= article.name %></td>
+          <td class="text-left py-3 px-6">
+            <%= link_to article.url, article.url, target: '_blank' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
