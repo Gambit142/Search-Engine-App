@@ -5,7 +5,6 @@ class QueriesController < ApplicationController
 
   def index
     @user = User.includes(:queries).find(current_user.id)
-    puts "👋👋 #{@user.inspect}"
   end
 
   def create
