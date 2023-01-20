@@ -1,16 +1,17 @@
-<main>
-  <h1>Search Engine</h1>
-  <section>
+<main class="home-page-container">
+  <section class="content-container display-flex">
+    <h1>Search Engine</h1>
     <% if user_signed_in? %>
       <h4>Hi! <%= current_user.name.capitalize %> </h4>
-      <%= button_to 'Shorten Url', long_urls_path, method: :get %>
-    <% else %>
-      <h4>Welcome</h4>
       <div>
-        <%= button_to 'LOG IN', new_user_session_path, method: :get %>
-        <%= button_to 'SIGN UP', new_user_registration_path, method: :get %>
+      <%= button_to 'Search Page', articles_path, class: "btn", method: :get %>
+      <%= render partial: "shared/sign_out" %>
+      </div>
+    <% else %>
+      <div>
+        <%= button_to 'LOG IN', new_user_session_path, class: "btn", method: :get %>
+        <%= button_to 'SIGN UP', new_user_registration_path, class: "btn", method: :get %>
       </div>
     <% end %>
-    <%= render partial: "shared/sign_out" %>
   </section>
 </main>
