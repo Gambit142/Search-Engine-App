@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --dark-blue: #1f2937;
+  --light-blue: #324e66;
+  --white: #fff;
+  --column: column;
+}
+
+/* ---------article-pages (Styled With Tail Wind & Custom CSS) ---------- */
+
 .sort {
   position: absolute;
   top: 1rem;
@@ -13,9 +22,138 @@
 }
 
 .sort-desc {
-  border-top: 8px solid #fff;
+  border-top: 8px solid var(--white);
 }
 
 .sort-asc {
-  border-bottom: 8px solid #fff;
+  border-bottom: 8px solid var(--white);
+}
+
+
+
+.display-flex {
+  display: flex;
+}
+
+.home-page-container, .devise-container {
+  position: relative;
+}
+
+.home-page-container:after, .devise-container:after {
+  content: '';
+  background-image: url('background-image');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1;
+  flex-direction: var(--column);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content-container h1 {
+  color: var(--light-blue);
+  font-size: 2.2rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.content-container h4{
+  color: #400c3f;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.btn, .field .btn {
+  border: 1px solid var(--dark-blue);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--dark-blue);
+  width: 100%;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.btn:hover {
+  background-color: var(--light-blue);
+  color: var(--white);
+}
+
+.btn:first-child {
+  margin: 1rem 0;
+}
+
+.notice, .success, .alert, .error {
+  text-align: center;
+  background: var(--dark-blue);
+  color: var(--white);
+  width: 100%;
+  padding: 0.8rem;
+}
+
+.width-150 {
+  width: 150px;
+}
+
+/* ---------devise-pages (Sign-In & Log In Pages)---------- */
+
+.field {
+  flex-direction: var(--column);
+}
+
+.field label {
+  color: var(--dark-blue);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.field input {
+  width: 15.625rem;
+  padding: 0.3rem;
+  background: transparent;
+  font-size: 1.3rem;
+  color: var(--dark-blue);
+  font-weight: 800;
+  border: none;
+  border-bottom: 2px solid var(--dark-blue);
+  outline: none;
+  text-align: center;
+}
+
+.field em {
+  color: var(--dark-blue);
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.back {
+  text-align: center;
+}
+
+.links-div {
+  flex-direction: var(--column);
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.links {
+  color: var(--dark-blue);
+  text-decoration: none;
+  font-size: 1.2rem;
 }
