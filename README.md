@@ -46,6 +46,7 @@
     <li><a href="https://tailwindcss.com/">Tail Wind CSS</a></li>
     <li><a href="https://github.com/heartcombo/devise">Devise</a></li>
     <li><a href="https://github.com/CanCanCommunity/cancancan">CanCanCan</a></li>
+    <li><a href="https://rspec.info/documentation/">Rspec</a></li>
   </ul>
 </details>
 
@@ -115,6 +116,7 @@ In order to run this project you need:
 + [Rbenv](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-macos)
 + [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 + [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
++ [Rspec](https://relishapp.com/rspec/rspec-rails/v/6-0/docs/gettingstarted)
 
 ### Setup
 
@@ -139,21 +141,26 @@ yarn install
 ### Database creation
 
 Next, use this command to create the databases:
-```
+```sh
 rails db:create
 ```
 
 ### Run Migrations
 
 Next, use this command to run the migration files:
-```
+```sh
 rails db:migrate
 ```
 
 ### Run Seed Data
 Next, use this command to run seed data:
-```
+```sh
 rails db:migrate
+```
+
+### Run Rspec Tests
+```sh
+rspec spec
 ```
 
 ### Usage
