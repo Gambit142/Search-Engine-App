@@ -1,4 +1,4 @@
-<div class="max-w-7xl mx-auto mt-12">
+<div class="max-w-7xl mx-auto mt-1">
   <table class="min-w-full bg-white">
     <thead class="bg-gray-800 text-white">
       <tr>
@@ -13,13 +13,13 @@
     <tbody class="text-gray-700">
       <% @user.queries.each do |query| %>
         <tr>
-          <td class="text-left py-3 px-6"><%= query.text %></td>
+          <td class="text-left py-3 px-6"><%= query.text.capitalize %></td>
           <td class="text-left py-3 px-6"><%= query.search_counter %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
   <div class="flex justify-center">
-    <%= link_to "Back", articles_path, class: "bg-gray-800 text-white p-2 rounded-sm" %>
+    <%= link_to "Back", articles_path, class: "bg-gray-800 text-white p-2 rounded-sm mt-2" %>
   </div>
 </div>
