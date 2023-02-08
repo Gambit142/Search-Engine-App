@@ -85,8 +85,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describes features of the application.
-
 - **It records input in real time**
 - **It displays analytics & trends of what you search for**
 - **It sorts resources in ascending and descending order**
@@ -100,8 +98,6 @@
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> This section describes how you can clone and use this project.
 
 To get a local copy up and running, follow these steps.
 
@@ -178,7 +174,7 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Click on my social links to can contact me for work and collaboration.
+> Click on my social links to contact me for work and collaboration.
 
 👤 **Author**
 
